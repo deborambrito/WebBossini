@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>USJT - AIRLINES</title>
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/sb-admin.css" rel="stylesheet">
+<link href="../css/plugins/morris.css" rel="stylesheet">
+<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><i
+					class="fa fa-fw fa-plane"></i><strong> USJT - AIRLINES</strong></a>
+			</div>
+			<!-- Top Menu Items -->
+			<ul class="nav navbar-right top-nav">
+
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown"><i class="fa fa-user"></i> Atendente<b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+
+						<li><a href="login.do"><i class="fa fa-fw fa-power-off"></i>
+								Log Out</a></li>
+					</ul></li>
+			</ul>
+			<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav side-nav">
+					<li>
+                        <a href="passagem.html"><i class="fa fa-fw fa-bar-chart-o"></i> Passagem</a>
+                    </li>                   
+                    <li>
+                        <a href="checkin.html"><i class="fa fa-fw fa-edit"></i> Check-In</a>
+                    </li>
+                    <li>
+                        <a href="passagemvendida.html"><i class="fa fa-fw fa-desktop"></i> Passagens Vendidas</a>
+                    </li>
+                    <li>
+                        <a href="passageiro.html"><i class="fa fa-fw fa-wrench"></i> Passageiro</a>
+                    </li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</nav>
+
+		<div id="page-wrapper">
+
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<div class="row">
+					<div class="col-lg-12">
+						<h1 class="page-header">Check-In</h1>
+						<ol class="breadcrumb">
+							<li><i class="fa fa-plane"></i> <a href="index.html">
+									USJ-Airlines</a></li>
+							<li class="active"><i class="fa fa-edit"></i> Check-In</li>
+						</ol>
+					</div>
+				</div>
+				<!-- /.row -->
+
+				<div class="row">
+					<div class="col-md-12">
+
+						<form action="passagem.do" method="post">
+
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-3">
+										<label style="margin-top: 45px;">Aeroporto de Destino</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-4">
+										<label>Partida</label> <select class="form-control">
+											<option>CONGONHAS</option>
+											<option>BRASÍLIA</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-4">
+										<label>Chegada</label> <select class="form-control">
+											<option>CONGONHAS</option>
+											<option>BRASÍLIA</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-3">
+										<label style="margin-top: 21px">Data/Hora</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-4">
+										<input class="form-control" type="date" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-4">
+										<input class="form-control" type="time" />
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-3">
+										<label style="margin-top: 21px">Quantidade de Passageiros </label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-2">
+										<input class="form-control" type="number" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-3">
+										<select class="form-control">
+											<option>Adulto</option>
+											<option>Criança</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-3">
+										<button class="btn btn-success" type="button">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true">
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-3">
+										<label style="margin-top: 21px">Valor da Passagem </label>
+									</div>
+								</div>
+								<div class="input-group" style="width: 249px;">
+
+									<span class="input-group-addon">R$</span> <input type="text"
+										class="form-control">
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-3" style="margin-top: 21px">
+										<label>Total + Taxa de Embarque </label>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-md-3">
+										<select class="form-control">
+											<option>Classe Econômica</option>
+											<option>Primeira Classe</option>
+											<option>Classe Executiva</option>
+										</select>
+									</div>
+								</div>
+								<div class="input-group" style="width: 249px;">
+									<span class="input-group-addon">R$</span> <input type="text"
+										class="form-control">
+								</div>
+							</div>
+							</br>
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-6">
+										<label>Vôos Disponiveis</label>
+										 <select multiple class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row" style="margin-top: 18px;">
+								<div class="form-group">
+									<div class="col-md-2">
+										<button class="btn btn-success" type="button">Confirmar
+										</button>
+
+									</div>
+									<div class="col-md-2" style="margin-left: -73px;">
+										<button class="btn btn-info" type="button">Limpar</button>
+									</div>
+								</div>
+
+							</div>
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /.container-fluid -->
+
+		</div>
+		<!-- /#page-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/plugins/morris/raphael.min.js"></script>
+	<script src="../js/plugins/morris/morris.min.js"></script>
+	<script src="../js/plugins/morris/morris-data.js"></script>
+
+</body>
+
+</html>
